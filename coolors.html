@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@800&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/5482ee0347.js"></script>
+
+    <link rel="stylesheet" href="coolors.css">
+    <title>Coolors</title>
+</head>
+<body>
+    <header class="navbar">
+      <img src="/coolorsImages/logo.svg" class="logo" alt="Palette">
+      <nav>
+        <ul>
+          <li class="gen"><a href="#">Generate</a></li>
+          <li class="exp"><a href="#">Explore</a></li>
+          <li class="more" onclick="toggleNavItems()"><a href="#">More</a> <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <div class="hidden">
+              <ul class="dropdown">
+                  <li><a href="#">Color Picker</a></li>
+                  <li><a href="#">Pick palette from photo</a></li>
+                  <li><a href="#">Create a collage</a></li>
+                  <li><a href="#">Make a gradient palette</a></li>
+                  <li><a href="#">Create a gradient</a></li>
+                  <li><a href="#">Explore gradients</a></li>
+                  <li class="contrast"><a href="#">Contrast checker</a></li>
+                  <li><a href="#">iOS app</a></li>
+                  <li><a href="#">Adobe addon</a></li>
+                  <li><a href="#">Chrome extension</a></li>
+              </ul>            
+              <div class="arrow"></div>
+            </div>
+          </li>
+          <li class="in"><a href="#">Sign in</a></li>
+      </ul>
+    </nav>
+  
+    
+    <nav class="secondNav">
+      <ul class="navlinks">
+        <li class="gen"><a href="#">Generate</a></li>
+        <li class="exp"><a href="#">Explore</a></li>
+        <li><a href="#">Color Picker</a></li>
+        <li><a href="#">Pick palette from photo</a></li>
+        <li><a href="#">Create a collage</a></li>
+        <li><a href="#">Make a gradient palette</a></li>
+        <li><a href="#">Create a gradient</a></li>
+        <li><a href="#">Explore gradients</a></li>
+        <li class="contrast"><a href="#">Contrast checker</a></li>
+        <li><a href="#">iOS app</a></li>
+        <li><a href="#">Adobe addon</a></li>
+        <li><a href="#">Chrome extension</a></li>
+        <li class="in"><a href="#">Sign in</a></li>
+    </ul>
+  </nav>
+      <a href="#"><button class="signUp"><b> Sign up</b></button></a>
+      
+      <div class="burger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+  </header>
+
+    <div class="content">
+        <div class="info">
+            <h1 class="SuperfastHeader">The super <span> fast </span> color schemes generator!</h1>
+            <p>Create the perfect palette or get inspired by thousands of beautiful color schemes.</p>
+            <div class="btnSection">
+                <a href="coolors2.html" target="_blank"><button type="submit" class="firstButton">Start the generator!</button></a>
+                <a href="#" target="_blank"><button type="submit" class="secondButton">Explore trending palettes</button>
+                </a>
+                </div>
+            <div class="productContainer">
+                <img src="./coolorsImages/top-post-badge.svg" alt="trophy badge">
+            </div>
+        </div>
+
+        <div class="palettePart">
+            <div class="palette">
+                <img src="./coolorsImages/palette.jpg" alt="palette" class="firstPic">
+            </div>
+        </div>
+    </div>
+
+    <section class="sites">
+        <div class="card1">
+            <i class="fa fa-laptop cardi" aria-hidden="true"></i>
+            <h3>Website</h3>
+            <p>All the power of Coolors <br> on your computer.</p>
+            <div class="overlay">
+                <a href="https://coolors.co/1b264f-274690-576ca8-302b27-f5f3f5" target="_blank"><div class="text">Use now <br> for free</div></a>
+            </div>
+        </div>
+        <div class="card2">
+            <i class="fa fa-apple cardi" aria-hidden="true"></i>
+            <h3>iOS App</h3>
+            <p>Create, browse and save <br> palettes on the go.</p>
+            <div class="overlay2">
+                <a href="https://apps.apple.com/app/coolors/id956480678" target="
+                _blank"><div class="text2">View on<br>the App<br> Store</div></a>
+            </div>
+        </div>
+        <div class="card3">
+            <i class="fa fa-audio-description cardi" aria-hidden="true"></i>
+            <h3>Adobe <br> Extension</h3>
+            <p>All palettes right into <br> your workspace.</p>
+            <div class="overlay3">
+                <a href="https://exchange.adobe.com/creativecloud.details.12124.html#.V6nhWJ" target="_blank"><div class="text3">Learn more</div></a>
+            </div>
+        </div>
+        <div class="card4">
+            <i class="fa fa-chrome cardi" aria-hidden="true"></i>
+            <h3>Website</h3>
+            <p>Get and edit a palette <br> every new tab.</p>
+            <div class="overlay4">
+                <a href="https://chrome.google.com/webstore/detail/coolors-for-chrome/paebljbhhfgngkcldmbcogmkgegjgmbg" target="_blank"><div class="text4">Add to <br>Chrome</div></a>
+            </div>
+        </div>
+        <div class="card5">
+            <i class="fa fa-instagram cardi" aria-hidden="true"></i>
+            <h3>Website</h3>
+            <p>Get your daily inspiration <br> of beautiful palettes.</p>
+            <div class="overlay5">
+                <a href="https://www.instagram.com/coolors.co/" target="_blank"><div class="text5">Follow us</div></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pic"><img src="./coolorsImages/testimonials.svg" alt=""></section>
+
+    <hr>
+
+    <section class="sectionContainer">
+        <div class="listContainer"><p>Website</p>
+            <ol>
+                <li>Generate your palettes</li>
+                <li>Explore popular palettes</li>
+                <li>Color picker</li>
+                <li>Pick palette from photo</li>
+                <li>Create a collage</li>
+                <li>Make a gradient palette</li>
+                <li>Create a gradient</li>
+                <li>Explore gradients</li>
+                <li>Contrast checker</li>
+            </ol>
+        </div>
+        <div class="listContainer"><p>Product</p>
+            <ol>
+                <li>iOS app</li>
+                <li>Adobe addon</li>
+                <li>Chrome extension</li>
+            </ol>
+        </div>
+        <div class="listContainer"><p>Company</p>
+            <ol>
+                <li>Terms of service</li>
+                <li>Privacy policy</li>
+                <li>Cookie policy</li>
+                <li>Help center</li>
+                <li>Advertise</li>
+                <li>Contact</li>
+            </ol>
+        </div>
+        <div class="listContainer"><p>Account</p>
+            <ol>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Reset password</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <img src="./coolorsImages/logo.svg" class="footerImg" alt="">
+        <div class="footerText">&#169; Coolors by <a href="#">Dooter Ior.</a> From a creative to all others.</div>
+        <div class="footerIcons">
+                <div><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                <div><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
+                <div><i class="fa fa-pinterest" aria-hidden="true"></i></div>
+                <div><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                <div><i class="fa fa-product-hunt" aria-hidden="true"></i></div>
+        </div>
+    </footer>
+
+    <script src="coolors.js"></script>
+</body>
+</html>

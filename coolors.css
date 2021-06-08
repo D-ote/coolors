@@ -1,0 +1,816 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li, a, .signUp {
+    text-decoration: none;
+    font-size: 14px;
+    color: lightslategray;
+    font-family: 'Exo', sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: white;
+    border-bottom: 1px solid rgb(212, 212, 212);
+  }
+  
+  .logo, i {
+    cursor: pointer;
+    margin-right: auto;
+  }
+  
+  nav {
+    display: block;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  
+  ul li {
+    display: inline-block;
+    padding: 0px 20px;
+    position: relative;
+  }
+  
+  ul li i a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  ul li a:hover {
+    color: black;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  ul ul.dropdown {
+    position: absolute;
+    top: 30px;
+    background-color: white;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    /* display: none; */
+    padding: 10px;
+    white-space: nowrap;
+    line-height: 25px;
+  }
+  
+  /* ul li.more:hover > .hidden {
+    display: block;
+  } */
+  .hidden:hover {
+    display: block;
+  }
+  ul ul li {
+    width: 185px;
+    float: none;
+    display: list-item;
+    position: relative;
+  }
+  
+  .contrast {
+    border-bottom: 1px solid rgb(212, 212, 212);
+  }
+  
+  .arrow {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 24px;
+    left: 32px;
+    background-color: white;
+    transform: rotate(45deg);
+    border: 1px solid rgb(212, 212, 212);
+    border-right: none;
+    border-bottom: none;
+    z-index: 100;
+  }
+  
+  i:hover {
+    color: #0088a9;
+  }
+  
+  .more {
+    border-right: 1px solid rgb(212, 212, 212);
+  }
+  
+  .signUp {
+    padding: 9px 10px;
+    background-color: rgb(50, 102, 199);
+    border: none;
+    border-radius: 10px;
+    width:80px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: white;
+    outline-style: none;
+  }
+  
+  .signUp:hover {
+    background-color: rgb(60, 140, 210);
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(50, 102, 199);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .secondNav {
+    display: none;
+  }
+
+.content {
+    margin-top: 100px;
+    /* margin-bottom: 30px;
+    margin-left: 10px; */
+    display: grid;
+    /* grid-template-rows: auto 1fr auto; */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "info info pic pic pic"
+                         "info info pic pic pic"
+                         "info info pic pic pic"
+                         "info info pic pic pic";
+    gap: 20px;
+}
+
+.info {
+    grid-area: info;
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+}
+
+.info h1 {
+    font-size: 50px;
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.info p {
+    width: 350px;
+    margin: 20px auto;
+    color: rgb(129, 127, 127);
+    font-size: 20px;
+}
+
+.btnSection {
+    margin-bottom: 30px;
+}
+
+.btnSection a {
+    display: grid;
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    text-decoration: none;
+    outline: none;
+}
+
+.firstButton {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+    font-family: 'Exo', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    background-color: rgb(50, 102, 199);
+    color: white;
+    font-size: 15px;
+    outline-style: none;
+}
+
+.firstButton:hover {
+    background-color: rgb(60, 140, 210);
+    color: white;
+}
+
+.secondButton {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+    font-family: 'Exo', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 15px;
+    background: none;
+    outline-style: none;
+}
+
+.secondButton:hover {
+    border:1px solid black;
+}
+
+.palettePart {
+    grid-area: pic;
+}
+
+.firstPic {
+    width: 100%;
+}
+
+.secondPic {
+    width: 100%;
+}
+
+.sites {
+    margin: 100px 50px 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "card1 card2 card3 card4 card5";
+    gap: 20px;
+    font-family: 'Exo', sans-serif;
+    /* margin: inherit auto; */ 
+}
+
+.card1 {
+    grid-area: card1;
+    background-color: rgb(240, 239, 239);
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card1 p, .card2 p, .card3 p, .card4 p, .card5 p {
+    color: rgb(111, 121, 131);
+}
+
+.cardi {
+    font-size: 80px;
+}
+
+h3 {
+    font-size: 25px;
+    padding: 15px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #dbfff3;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+  
+.card1:hover .overlay {
+    height: 100%;
+}
+  
+.text {
+    color: rgb(40, 134, 106);
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card2 {
+    grid-area: card2;
+    background-color: rgb(240, 239, 239);
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.overlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #cbeeff;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+  
+.card2:hover .overlay2 {
+    height: 100%;
+}
+  
+.text2 {
+    color: rgb(34, 102, 158);
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card3 {
+    grid-area: card3;
+    background-color: rgb(240, 239, 239);
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.overlay3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ebd5ff;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+  
+.card3:hover .overlay3 {
+    height: 100%;
+}
+  
+.text3 {
+    color: rgb(99, 40, 134);
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card4 {
+    grid-area: card4;
+    background-color: rgb(240, 239, 239);
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.overlay4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffbde1;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+  
+.card4:hover .overlay4 {
+    height: 100%;
+}
+  
+.text4 {
+    color: rgb(134, 40, 98);
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card5 {
+    grid-area: card5;
+    background-color: rgb(240, 239, 239);
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.overlay5 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff7d4;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+  
+.card5:hover .overlay5 {
+    height: 100%;
+}
+  
+.text5 {
+    color: rgb(173, 163, 17);
+    font-size: 30px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pic {
+    margin:  100px 50px 50px 50px;
+}
+
+hr {
+    margin: 100px 0;
+}
+
+.sectionContainer {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Exo', sans-serif;
+    padding-bottom: 60px;
+}
+
+.listContainer {
+    flex-direction: row-reverse;
+}
+
+.listContainer ol {
+    list-style: none;
+}
+
+.listContainer p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.listContainer li {
+    color: rgb(111, 121, 131);
+    margin: 0 0 10px 0;
+}
+
+.listContainer li:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background-color:rgb(240, 239, 239);
+    font-family: 'Exo', sans-serif;
+}
+
+.footerText {
+    align-self: center;
+    color: rgb(111, 121, 131);
+    font-size: 12px;
+}
+
+.footerText a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.footerText a:hover {
+    text-decoration: underline;
+}
+
+.footerIcons {
+    display: flex;
+}
+
+.footerIcons div {
+    margin-right: 20px;
+    font-size: 25px;
+    color: rgb(111, 121, 131);
+}
+
+.footerIcons div:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.footerImg:hover {
+    cursor: pointer;
+    color: brown;
+}
+
+@media screen and (max-width: 1143px) {
+    .sites {
+        margin: 100px 50px 20px 50px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "card1 card1 card2 card2 card3 card3"
+                             "card4 card4 card4 card5 card5 card5";
+        gap: 20px;
+        font-family: 'Exo', sans-serif;
+    }
+
+    .card1 {
+        grid-area: card1;
+    }
+
+    .card2 {
+        grid-area: card2;
+    }
+
+    .card3 {
+        grid-area: card3;
+    }
+
+    .card4 {
+        grid-area: card4;
+    }
+
+    .card5 {
+        grid-area: card5;
+    }
+
+    .pic {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .sites {
+        margin: 100px 50px 20px 50px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "card1 card2"
+                             "card3 card4"
+                             "card5 card5";
+        gap: 20px;
+        font-family: 'Exo', sans-serif;
+    }
+
+    .card1 {
+        grid-area: card1;
+    }
+
+    .card2 {
+        grid-area: card2;
+    }
+
+    .card3 {
+        grid-area: card3;
+    }
+
+    .card4 {
+        grid-area: card4;
+    }
+
+    .card5 {
+        grid-area: card5;
+    }
+
+
+    .sectionContainer {
+        display: block;
+        text-align: center;
+        font-family: 'Exo', sans-serif;
+    }    
+
+    .listContainer {
+        margin-bottom: 60px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerImg {
+        height: 30px;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .footerText {
+        margin-bottom: 30px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    
+    .content {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "info info info"
+                             "info info info"
+                             "info info info"
+                             "info info info";
+    }
+
+    .info {
+        grid-area: info;
+        text-align: center;
+        font-family: 'Exo', sans-serif;
+    }
+
+    .palettePart {
+        display: none;
+    }
+
+    
+  nav {
+    display: none;
+  }
+
+  .secondNav {
+    display: block;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .exp, .contrast {
+    border-bottom: 1px solid rgb(212, 212, 212);
+    width: 80%;
+  }
+
+  .navlinks {
+    position: absolute;
+    padding-top: 10px;
+    left: 0px;
+    height: 56vh;
+    top: 6.70vh;
+    border: 1px solid rgb(212, 212, 212);
+    border-bottom-right-radius: 20px;
+    background-color: white;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    align-items:flex-start;
+    line-height: 25px;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .navlinks li {
+    opacity: 0;
+  } 
+
+  .logo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .burger {
+    display: block;
+    order: -1;
+  }
+
+  .nav-active {
+    transform: translate(0%);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(-70px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(10px);
+    }
+  }
+  
+  .toggle .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .toggle .bar2 {
+    opacity: 0;
+  }
+  
+  .toggle .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);  
+  }
+}
+
+@media screen and (max-width: 646px) {
+    .sites {
+        margin: 100px 50px 20px 50px;
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: "card1"
+                             "card2"
+                             "card3"
+                             "card4"
+                             "card5";
+        gap: 20px;
+        font-family: 'Exo', sans-serif;
+    }
+
+    .card1 {
+        grid-area: card1;
+    }
+
+    .card2 {
+        grid-area: card2;
+    }
+
+    .card3 {
+        grid-area: card3;
+    }
+
+    .card4 {
+        grid-area: card4;
+    }
+
+    .card5 {
+        grid-area: card5;
+    }
+
+    .content {
+      margin-top: 60px;
+    }
+
+    .info h1 {      
+      line-height: 3rem;
+    }
+
+    .info p {
+        width: 100%;
+        margin: 20px auto;
+        color: rgb(129, 127, 127);
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .container li:not(.signIn) {
+      display: none;
+    }
+  .container a.icon {
+    display: block;
+  }
+
+  .signIn {
+      border: 1px solid rgb(212, 212, 212);
+      border-radius: 5px;
+      padding: 8px;
+      color: black !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container.responsive {
+      position: relative;
+    }
+  .container.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .container.responsive li {
+    list-style: none;
+  }
+}

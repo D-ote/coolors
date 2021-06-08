@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://use.fontawesome.com/5482ee0347.js"></script>
+
+    <link rel="stylesheet" href="coolors2.css">
+    <title>Coolors Palette</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <img src="/coolorsImages/logo.svg" class="logo" alt="Palette">
+        <nav>
+            <ul class="headerList">
+                <li class="gen"><a href="#">Generate</a></li>
+                <li class="exp"><a href="#">Explore</a></li>
+                <li class="more" onclick="toggleNavItems()"><a href="#">More <i class="fa fa-caret-down"
+                            aria-hidden="true"></i></a>
+                    <div class="hidden">
+                        <ul class="dropdown">
+                            <li><a href="#">Color Picker</a></li>
+                            <li><a href="#">Pick palette from photo</a></li>
+                            <li><a href="#">Create a collage</a></li>
+                            <li><a href="#">Make a gradient palette</a></li>
+                            <li><a href="#">Create a gradient</a></li>
+                            <li><a href="#">Explore gradients</a></li>
+                            <li class="contrast"><a href="#">Contrast checker</a></li>
+                            <li><a href="#">iOS app</a></li>
+                            <li><a href="#">Adobe addon</a></li>
+                            <li><a href="#">Chrome extension</a></li>
+                        </ul>
+                        <div class="arrow"></div>
+                    </div>
+                </li>
+                <li class="in"><a href="#">Sign in</a></li>
+            </ul>
+        </nav>
+
+
+        <nav class="secondNav" id="secondNav">
+            <ul class="navlinks">
+                <li class="gen"><a href="#">Generate</a></li>
+                <li class="exp"><a href="#">Explore</a></li>
+                <li><a href="#">Color Picker</a></li>
+                <li><a href="#">Pick palette from photo</a></li>
+                <li><a href="#">Create a collage</a></li>
+                <li><a href="#">Make a gradient palette</a></li>
+                <li><a href="#">Create a gradient</a></li>
+                <li><a href="#">Explore gradients</a></li>
+                <li class="contrast"><a href="#">Contrast checker</a></li>
+                <li><a href="#">iOS app</a></li>
+                <li><a href="#">Adobe addon</a></li>
+                <li><a href="#">Chrome extension</a></li>
+                <li class="in"><a href="#">Sign in</a></li>
+            </ul>
+        </nav>
+        <a href="#"><button class="sign"><b> Sign up</b></button></a>
+
+        <div class="burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+
+    <div class="navbar2">
+        <p>Press the spacebar to generate color palettes!
+            </p>
+        <div class="icons">
+            <div class="dropdown">
+                <a href="#" data-tool-tip="more"><i class="fa fa-ellipsis-h dots" aria-hidden="true"></i></a>
+                <div class="content">
+                    <a href="#" class="spinner"><i class="fa fa-spinner" aria-hidden="true"></i> Generate Method</a>
+                    <a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Setting</a>
+                    <a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Watch</a>
+                </div>
+            </div>
+            <a href="#" data-tool-tip="Create palette from photo"><i class="fa fa-camera-retro camera"
+                    aria-hidden="true"></i></a>
+            <a href="#" data-tool-tip="Create a collage"><i class="fa fa-file-image-o collage"
+                    aria-hidden="true"></i></a>
+            <a href="#" data-tool-tip="Undo"><i class="fa fa-long-arrow-left arrowl" aria-hidden="true"></i></a>
+            <a href="#" data-tool-tip="Redo"><i class="fa fa-long-arrow-right arrowr" aria-hidden="true"></i></a>
+            <a href="#" data-tool-tip="Color blindness"><i class="fa fa-eye-slash blind" aria-hidden="true"></i></a>
+            <a href="#" data-tool-tip="Adjust palette"><i class="fa fa-sun-o sun" aria-hidden="true"></i></a>
+            <a href="#" data-tool-tip="View palette"><i class="fa fa-eye eye" aria-hidden="true"><span class="viewText">
+                        View</span></i></a>
+            <a href="#" data-tool-tip="Export palette"><i class="fa fa-share-alt export" aria-hidden="true"><span
+                        class="exportText"> Export</span></i></a>
+            <a href="#" data-tool-tip="Save palette"><i class="fa fa-bookmark-o save" aria-hidden="true"><span
+                        class="saveText"> Save</span></i></a>
+            <i class="fa fa-bars saved" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <section class="bottom">
+        <div class="bottomNav">
+            <button class="genBottomNav">Generate</button>
+            <ul class="bottomNavList">
+                <li><i class="fa fa-long-arrow-left arrowLeft" aria-hidden="true"></i></li>
+                <li><i class="fa fa-long-arrow-right arrowr" aria-hidden="true"></i></li>
+                <li><i class="fa fa-eye-slash blind" aria-hidden="true"></i></li>
+                <li><i class="fa fa-share-alt export" aria-hidden="true"></i></li>
+                <li><i class="fa fa-bookmark-o save" aria-hidden="true"></i></li>
+                <li><i class="fa fa-bars saved" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="pal" id="pal">
+        <div class="palette" id="palette" ondragover="dragOver()">
+        </div>
+    </section>
+
+    <script src="coolors2.js"></script>
+</body>
+
+</html>
