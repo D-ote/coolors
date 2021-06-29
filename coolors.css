@@ -23,6 +23,8 @@ li, a, .signUp {
   .logo, i {
     cursor: pointer;
     margin-right: auto;
+    /* width: 80px;
+    height: 50px; */
   }
   
   nav {
@@ -31,13 +33,22 @@ li, a, .signUp {
   
   nav ul {
     list-style: none;
+    display: flex;
+    align-items: center;
   }
   
   
   ul li {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items:center;
     padding: 0px 20px;
     position: relative;
+  }
+
+  .moreDown {
+    display: flex;
+    align-items: center;
   }
   
   ul li i a {
@@ -58,7 +69,6 @@ li, a, .signUp {
     background-color: white;
     border: 1px solid rgb(212, 212, 212);
     border-radius: 10px;
-    /* display: none; */
     padding: 10px;
     white-space: nowrap;
     line-height: 25px;
